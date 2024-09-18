@@ -1,0 +1,452 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: rgb(3, 3, 39);
+}
+
+/* * ============================== */
+/* * ============ MENU  ========== */
+/* * ============================== */
+
+.menu{
+    height: 100px;
+    padding: 10px 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    color: #fff;
+}
+
+.menu ul{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.menu ul li{
+    list-style-type: none;
+}
+
+.menu ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link {
+	color: #fff;
+	font-size: 24px;
+	padding: 0.5rem;
+	position: relative;
+  }
+  
+.link::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	border-radius: 5px;
+	transform: scaleX(0);
+	transition: all 0.6s ease;
+  }
+  
+.link::before {
+	bottom: 0;
+	left: 0;
+  }
+  
+.link:hover::before {
+	transform: scaleX(1);
+  }
+  
+#hire-me {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	color: black;
+	border-radius: 5px;
+	padding: 0.2rem 0.7rem;
+	transition: all 0.6s ease;
+  }
+  
+#hire-me:hover {
+	background-color: transparent;
+	color: #fff;
+	padding: 0.5rem;
+  }
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #000000;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin: auto;
+}
+
+.contenedor-imagen::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	right: 0;
+	background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,.8));
+}
+
+
+/* * ============================== */
+/* * ======    TEXTO     ========== */
+/* * ============================== */
+
+.letras{
+	padding: 0px 200px;
+	align-items: center;
+}
+
+.letras h1{
+	color: #ffffff;
+	font-size: 30px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.letras h2{
+	color: #ffffff;
+	text-align: center;
+	padding: 30px 0px;
+}
+
+
+/* * ============================== */
+/* * ======   COOKIES    ========== */
+/* * ============================== */
+
+.aviso-cookies{
+	display: none;
+	background: #232323;
+	padding: 40px;
+	width: calc(100%-40px);
+	max-width: 1000px;
+	line-height: 150%;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 100;
+	padding-top: 60px;
+	box-shadow: 0px 2px 20px 10px rgba(235, 226, 226, 0.473);
+	text-align: center;
+}
+
+.aviso-cookies.activo{
+	display: block;
+}
+
+.aviso-cookies .galleta{
+	max-width: 400px;
+	position: absolute;
+	top: -2px;
+	left: calc(50% - 63px);
+	border-radius: 10px;
+}
+
+.aviso-cookies .ttgalleta,
+.aviso-cookies .ppgalletas{
+	color: #fff;
+	margin-top: 15px;
+}
+
+.aviso-cookies .cookies-boton{
+	width: 100%;
+	background: rgb(4, 0, 255);
+	border: none;
+	color: #fff;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 15px 30px;
+	font-weight: 700;
+    cursor: pointer;
+	transition: .3 ease all;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+
+.revisar_cookies .enlaceCK{
+	width: 100%;
+	background: black;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	border: none;
+	text-align: center;
+	padding: 15px 396px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.aviso-cookies .cookies-boton:hover{
+	transition: 0.4s;
+	background-color: #004a61;
+}
+
+.aviso-cookies .enlaceCK:hover{
+	text-decoration: none;
+	transition: 0.3s;
+	background-color: #525151;
+}
+
+.fondo-aviso-cookies{
+	display: none;
+	background: rgba(0, 0, 0, .20);
+	position: fixed;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.fondo-aviso-cookies.activo{
+	display: block;
+}
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+
+.pie-pagina{
+	width: 100%;
+	background-color: #000000;
+
+}
+
+.box a{
+	display: flex;
+}
+
+.pie-pagina .grupo-1{
+	width: 100%;
+	max-width: 1200%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 50px;
+	padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+	width: 250px;
+}
+
+.social-icons a i{
+	font-size: 2em;
+	text-align: center;
+}
+
+.pie-pagina .grupo-1 .box h2{
+	color: #ffffff;
+	margin-bottom: 25px;
+	font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+	color: #efefef;
+	margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .social-icons a{
+	display: inline-block;
+	text-decoration: none;
+	width: 50px;
+	height: 50px;
+	line-height: 60px;
+	color: rgb(0, 0, 0);
+	margin-right: 10px;
+	background-color: #ffffff;
+	text-align: center;
+	transition: all 300ms ease;
+	border-radius: 50%;
+}
+
+.face .insta .twitter .google{
+	font-size: 70px;
+}
+
+.pie-pagina .grupo-1 .social-icons .face:hover{
+	color: rgba(0, 68, 255, 0.822);
+}
+
+.pie-pagina .grupo-1 .social-icons .insta:hover{
+	color: orange;
+}
+
+.pie-pagina .grupo-1 .social-icons .twitter:hover{
+	color: rgb(0, 204, 255);
+}
+
+.pie-pagina .grupo-1 .social-icons .google:hover{
+	color: rgb(255, 61, 61);
+}
+
+
+/* * ============================== */
+/* * ====== FOOTER ABAJO ========== */
+/* * ============================== */
+
+.pie-pagina .grupo-2{
+	background-color: #0a1a2a;
+	padding: 15px 10px;
+	text-align: center;
+	color: #ffffff;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pie-pagina .grupo-2 small{
+	font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+	.pie-pagina .grupo-1{
+		width: 90%;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 30px;
+		padding: 35px 0px;
+	}
+}
+
+
+
+
+/* * ============================== */
+/* * ===== IMAGENES PROYECTOS ===== */
+/* * ============================== */
+
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.boxxx{
+	width: 800px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	margin: 200px;
+	border-radius: 25px;
+}
+
+.boxxx img{
+	width: 100%;
+	height: 100%;
+
+}
+
+.capa{
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	transform: scale(0);
+	transition: 0.3s ease;
+}
+
+.boxxx:hover .capa{
+	transform: scale(1);
+}
+
+
+
+/* * ============================== */
+/* * ======== proyectos =========== */
+/* * ============================== */
+
+.corruptopia{
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+}
+
+.corruptopia .corruptopiaa img{
+	margin: 40px 0px 0px 0;
+	min-width: 300px;
+	min-height: 300px;
+	border-radius: 10px;
+
+}
